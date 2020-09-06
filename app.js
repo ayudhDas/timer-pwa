@@ -21,6 +21,7 @@
     function startTimer() {
         timerState.isRunning = true;
         startStopButton.innerText = 'Pause';
+        resetButton.setAttribute('disabled', 'true');
         timerRef = setInterval(function(){
             setCountDownTimerText(timerState.timeElapsed + 1);
         }, 10);
